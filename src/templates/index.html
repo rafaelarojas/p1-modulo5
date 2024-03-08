@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Cadastrar novo caminho</title>
+</head>
+<body>
+    <form action="/novo" method="post">
+    <h1>Insira um novo caminho abaixo</h1>
+      <input type="text" name="caminho_id" placeholder="id"/>
+      <input type="number" name="x" placeholder="x"/>
+      <input type="number" name="y" placeholder="y"/>
+      <input type="number" name="z" placeholder="z"/>
+      <input type="number" name="r" placeholder="r"/>
+      <input type="submit" value="Enviar"/>
+    </form>
+    <form action="/pegar_caminho/<int:caminho_id> method="get">
+        <h1>Encontre um caminho através de seu ID</h1>
+        <input type="text" name="name" placeholder="ID"/>
+        <input type="submit" value="Enviar"/>
+    </form>
+    <form action="/listas_caminhos" method="get">
+        <h1>Caminhos listados</h1>
+        <input type="submit" value="Enviar"/>
+    </form>
+    <form action="/atualizar/<int:caminho_id>" method="post">
+        <h1>Atualize o caminho através do id</h1>
+        <input type="text" name="caminho_id" placeholder="id"/>
+        <input type="number" name="x" placeholder="x"/>
+        <input type="number" name="y" placeholder="y"/>
+        <input type="number" name="z" placeholder="z"/>
+        <input type="number" name="r" placeholder="r"/>
+        <input type="submit" value="Enviar"/>
+    </form>
+    <form action="/deletar/<int:caminho_id>" method="post">
+        <h1>Delete um ponto através do id</h1>
+        <input type="text" name="caminho_id" placeholder="id"/>
+        <input type="submit" value="Enviar"/>
+    </form>
+</body>
+</html>
